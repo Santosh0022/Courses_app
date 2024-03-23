@@ -47,8 +47,9 @@ hr {
 </style>
 </head>
 <body>
-<form action="Register" method="get">
-
+{%block content%}
+<form action="" method="post">
+{% csrf_token %}
   <div class="container">
   <center>  <h1> Student Registeration Form</h1> </center>
   <hr>
@@ -63,9 +64,10 @@ hr {
 <label> Username: </label>  
 <input type="text" name="Username" placeholder="Username" size="15"required /> 
 <label> Email: </label>  
-<input type="text" name="Email" placeholder="email" size="15"required /> 
-<input type="submit" />
+<input type="email" name="Email" placeholder="email" size="15"required /> 
+<input type="submit"  />
 </div>
 </form>
+{%endblock%}
 </body>
 </html>
